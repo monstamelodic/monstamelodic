@@ -396,3 +396,110 @@ footer{background:var(--dark);color:white;padding:58px 7% 28px}
   .idol-member-card:last-child{grid-column:auto;width:100%}
   .idol-details p{grid-template-columns:110px 1fr}
 }
+
+
+/* APPLICATIONS PAGE */
+.applications-main{
+  background:
+    radial-gradient(circle at 18% 14%,rgba(216,75,228,.13),transparent 24%),
+    linear-gradient(180deg,#fbfaff,#f3efff);
+}
+.applications-hero{
+  min-height:510px;padding:72px 7%;
+  display:grid;grid-template-columns:.72fr 1.28fr;gap:7%;align-items:center;
+  background:
+    radial-gradient(circle at 82% 22%,rgba(240,138,248,.34),transparent 27%),
+    linear-gradient(145deg,#d7d0ee,#c7bce8);
+  border-bottom:4px solid var(--ink);position:relative;overflow:hidden
+}
+.applications-hero::after{
+  content:"KAIJU CREW ✦ KAIJU CREW ✦ KAIJU CREW ✦";
+  position:absolute;left:-10px;bottom:20px;white-space:nowrap;
+  font:800 .78rem "Baloo 2";letter-spacing:.18em;opacity:.17
+}
+.applications-logo{min-height:330px;display:grid;place-items:center}
+.applications-logo img{
+  width:min(100%,390px);max-height:330px;object-fit:contain;
+  filter:drop-shadow(0 12px 0 rgba(49,38,101,.10))
+}
+.applications-intro h1{
+  font:800 clamp(4rem,8vw,7rem)/.8 "Baloo 2";
+  letter-spacing:-.07em;margin:14px 0 26px
+}
+.applications-intro h1 span{color:var(--pink)}
+.applications-intro>p:last-child{max-width:620px;line-height:1.75;font-size:1.05rem}
+.applications-section{padding:86px 7% 105px}
+.applications-heading{text-align:center;margin-bottom:58px}
+.applications-heading h2{
+  font:800 clamp(3.8rem,7vw,6.6rem)/.85 "Baloo 2";
+  letter-spacing:-.06em;margin:10px 0 18px
+}
+.applications-heading>p:last-child{opacity:.65}
+.application-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:38px 44px;max-width:1080px;margin:0 auto
+}
+.kaiju-application{
+  min-height:178px;position:relative;
+  display:grid;grid-template-columns:88px 1fr;gap:18px;align-items:center;
+  padding:24px 30px;
+  background:linear-gradient(145deg,#d84f95,#c94786);
+  color:#fff;border:4px solid var(--ink);border-radius:34px;
+  box-shadow:9px 10px 0 rgba(49,38,101,.16);
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease
+}
+.kaiju-application:nth-child(2){background:linear-gradient(145deg,#a55cdf,#7e57c6)}
+.kaiju-application:nth-child(3){background:linear-gradient(145deg,#785bc6,#5f50a8)}
+.kaiju-application:nth-child(4){background:linear-gradient(145deg,#ec6fcb,#c94eae)}
+.kaiju-application:hover{
+  transform:translateY(-8px) rotate(-.5deg);
+  box-shadow:13px 16px 0 rgba(49,38,101,.16);
+  filter:saturate(1.08)
+}
+.horn{
+  position:absolute;top:-28px;width:44px;height:52px;background:var(--ink);
+  clip-path:polygon(50% 0,100% 100%,0 100%)
+}
+.horn::after{
+  content:"";position:absolute;inset:7px 8px 2px;background:#fff;
+  clip-path:polygon(50% 0,100% 100%,0 100%)
+}
+.horn-left{left:44px;transform:rotate(-13deg)}
+.horn-right{right:44px;transform:rotate(13deg)}
+.application-icon{
+  width:72px;height:72px;display:grid;place-items:center;border:3px solid #fff;
+  border-radius:50%;font:800 2rem "Baloo 2";background:rgba(255,255,255,.12)
+}
+.application-copy{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.application-copy small{
+  font:800 .67rem "Baloo 2";letter-spacing:.13em;text-transform:uppercase;opacity:.8
+}
+.application-copy strong{
+  font:800 clamp(1.5rem,2.4vw,2.2rem)/.98 "Baloo 2";letter-spacing:-.03em
+}
+.application-copy em{
+  margin-top:4px;font-style:normal;font-size:.78rem;font-weight:800;opacity:.82
+}
+.applications-note{
+  margin:70px auto 0;max-width:1080px;border:3px solid var(--ink);
+  border-radius:28px;background:white;padding:28px 32px;
+  display:flex;justify-content:space-between;align-items:center;gap:28px
+}
+.applications-note h3{font:800 1.5rem "Baloo 2";margin-top:5px}
+
+@media(max-width:900px){
+  .applications-hero{grid-template-columns:1fr;text-align:center}
+  .applications-intro>p:last-child{margin:auto}
+  .applications-logo{min-height:240px}
+  .applications-logo img{max-height:240px}
+  .application-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .applications-hero{padding:58px 22px 72px}
+  .applications-section{padding:68px 20px 85px}
+  .kaiju-application{grid-template-columns:66px 1fr;padding:22px 20px;min-height:155px}
+  .application-icon{width:58px;height:58px;font-size:1.6rem}
+  .horn{width:34px;height:42px;top:-22px}
+  .horn-left{left:28px}.horn-right{right:28px}
+  .applications-note{flex-direction:column;align-items:flex-start}
+}
