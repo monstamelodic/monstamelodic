@@ -42,7 +42,7 @@ const discordTriggers = document.querySelectorAll(".discord-trigger");
 const discordCloseButtons = document.querySelectorAll("[data-close-modal]");
 
 /* REPLACE THIS WITH YOUR REAL DISCORD INVITE */
-const DISCORD_INVITE = "https://discord.gg/YOURCODE";
+const DISCORD_INVITE = "https://discord.gg/abpRnYb4Mw";
 
 document.querySelectorAll(".discord-join").forEach(link => {
   link.href = DISCORD_INVITE;
