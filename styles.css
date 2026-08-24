@@ -507,3 +507,441 @@ footer{background:var(--dark);color:white;padding:58px 7% 28px}
 .audition-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}.audition-actions .ghost{color:#fff;border-color:#fff;background:rgba(255,255,255,.08)}.application-grid .kaiju-application:nth-child(5){background:linear-gradient(145deg,#7755b8,#5a448f)}.application-grid .kaiju-application:nth-child(6){background:linear-gradient(145deg,#df69ba,#b94a98)}
 /* IDOL APPLICATIONS PAGE */
 .idol-app-main{background:radial-gradient(circle at 15% 10%,rgba(216,75,228,.12),transparent 23%),linear-gradient(180deg,#faf8ff,#f3efff)}.idol-app-hero{min-height:610px;padding:76px 7%;display:grid;grid-template-columns:.75fr 1.25fr;gap:7%;align-items:center;background:radial-gradient(circle at 82% 20%,rgba(240,138,248,.28),transparent 26%),radial-gradient(circle at 10% 82%,rgba(102,80,173,.20),transparent 28%),linear-gradient(145deg,#ddd7f0,#c9b9f2);border-bottom:5px solid var(--ink);position:relative;overflow:hidden}.idol-app-hero::after{content:"MONSTA MELODIC ✦ IDOL AUDITIONS ✦ MONSTA MELODIC ✦";position:absolute;bottom:18px;left:-12px;white-space:nowrap;font:800 .75rem "Baloo 2";letter-spacing:.16em;opacity:.18}.idol-app-logo{display:grid;place-items:center}.idol-app-logo img{width:min(100%,430px);max-height:370px;object-fit:contain;filter:drop-shadow(0 14px 0 rgba(49,38,101,.10))}.idol-app-intro h1{font:800 clamp(3.6rem,7vw,6.8rem)/.84 "Baloo 2";letter-spacing:-.065em;margin:15px 0 24px}.idol-app-intro h1 span{color:var(--pink)}.idol-app-intro>p:last-of-type{max-width:650px;font-size:1.04rem;line-height:1.75}.idol-top-apply{margin-top:26px}.idol-info-section{padding:95px 7% 115px}.idol-info-heading{text-align:center;max-width:850px;margin:0 auto 52px}.idol-info-heading h2{font:800 clamp(3.6rem,7vw,6.4rem)/.86 "Baloo 2";letter-spacing:-.06em;margin:10px 0 16px}.idol-info-heading>p:last-child{opacity:.68}.idol-accordion-wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:20px}.idol-accordion{border:4px solid var(--ink);border-radius:30px;background:white;overflow:hidden;box-shadow:8px 9px 0 rgba(49,38,101,.10)}.idol-accordion summary{list-style:none;cursor:pointer;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(135deg,#d8cff5,#efc7eb);font:800 clamp(1.35rem,2.7vw,2.15rem) "Baloo 2"}.idol-accordion summary::-webkit-details-marker{display:none}.accordion-plus{width:42px;height:42px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:800 1.4rem "Baloo 2";transition:transform .25s ease;background:#fff}.idol-accordion[open] .accordion-plus{transform:rotate(45deg)}.idol-accordion-body{padding:34px;border-top:3px solid var(--ink)}.requirements-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.requirement-card{border:2px solid var(--ink);border-radius:22px;padding:24px;background:#fbfaff}.req-num{display:inline-grid;place-items:center;width:38px;height:38px;border:2px solid var(--ink);border-radius:50%;font:800 .72rem "Baloo 2";background:var(--lav);margin-bottom:15px}.requirement-card h3{font:800 1.35rem "Baloo 2";margin-bottom:8px}.requirement-card p{line-height:1.65;opacity:.8}.submission-intro{max-width:760px;line-height:1.7;margin-bottom:30px}.submission-guides{display:flex;flex-direction:column;gap:28px}.submission-guide{display:grid;grid-template-columns:.72fr 1.28fr;gap:32px;align-items:center;padding:26px;border:2px solid var(--ink);border-radius:24px;background:#fbfaff}.submission-guide:nth-child(even){grid-template-columns:1.28fr .72fr}.submission-guide:nth-child(even) .guide-copy{order:2}.submission-guide:nth-child(even) img{order:1}.submission-guide h3{font:800 2rem "Baloo 2";margin:7px 0 10px}.submission-guide p:not(.eyebrow){line-height:1.65;opacity:.8}.submission-guide img{width:100%;border:3px solid var(--ink);border-radius:18px;display:block;background:#fff}.idol-apply-panel{margin:72px auto 0;max-width:1080px;text-align:center;padding:58px 42px 66px;border:4px solid var(--ink);border-radius:36px;background:radial-gradient(circle at 80% 18%,rgba(216,75,228,.24),transparent 24%),linear-gradient(145deg,#d7cdf5,#efc4e8);box-shadow:10px 12px 0 rgba(49,38,101,.12);position:relative}.apply-monster-mark{width:74px;height:74px;display:grid;place-items:center;margin:0 auto 15px;border:3px solid var(--ink);border-radius:50%;background:#fff;font-size:1.7rem}.idol-apply-panel h2{font:800 clamp(3rem,6vw,5.6rem)/.86 "Baloo 2";letter-spacing:-.055em;margin:10px 0 18px}.idol-apply-panel>p:last-of-type{max-width:680px;margin:0 auto;line-height:1.7}.monster-apply-button{width:min(560px,92%);min-height:120px;margin:48px auto 0;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(145deg,#d84be4,#8c5bdd);color:#fff;border:4px solid var(--ink);border-radius:30px;box-shadow:9px 10px 0 rgba(49,38,101,.16);transition:transform .2s ease,box-shadow .2s ease}.monster-apply-button:hover{transform:translateY(-6px);box-shadow:13px 16px 0 rgba(49,38,101,.15)}.monster-apply-button strong{font:800 clamp(1.8rem,4vw,2.7rem) "Baloo 2"}.monster-apply-button>span:last-child{font-size:.8rem;font-weight:700;opacity:.85}.apply-horn{position:absolute;top:-35px;width:48px;height:58px;background:var(--ink);clip-path:polygon(50% 0,100% 100%,0 100%)}.apply-horn::after{content:"";position:absolute;inset:8px 8px 3px;background:#fff;clip-path:polygon(50% 0,100% 100%,0 100%)}.apply-horn.left{left:60px;transform:rotate(-13deg)}.apply-horn.right{right:60px;transform:rotate(13deg)}.apply-tail{position:absolute;right:-42px;bottom:-20px;width:88px;height:88px;border-right:12px solid var(--ink);border-bottom:12px solid var(--ink);border-radius:0 0 70px 0;transform:rotate(18deg)}.apply-tail::after{content:"";position:absolute;right:-17px;bottom:-17px;width:30px;height:30px;background:var(--ink);clip-path:polygon(50% 0,100% 100%,0 78%);transform:rotate(-15deg)}@media(max-width:900px){.idol-app-hero{grid-template-columns:1fr;text-align:center}.idol-app-intro>p:last-of-type{margin-inline:auto}.idol-app-logo img{max-height:270px}.requirements-grid{grid-template-columns:1fr}.submission-guide,.submission-guide:nth-child(even){grid-template-columns:1fr}.submission-guide:nth-child(even) .guide-copy,.submission-guide:nth-child(even) img{order:initial}}@media(max-width:600px){.audition-actions{flex-direction:column;align-items:stretch}.audition-actions .btn{width:100%}.idol-app-hero{padding:58px 22px 75px}.idol-info-section{padding:72px 20px 90px}.idol-accordion summary{padding:22px 20px}.idol-accordion-body{padding:22px 18px}.submission-guide{padding:18px}.idol-apply-panel{padding:45px 22px 58px}.monster-apply-button{width:100%}.apply-horn.left{left:28px}.apply-horn.right{right:28px}.apply-tail{right:-20px;transform:scale(.8) rotate(18deg)}}
+
+
+/* =========================================================
+   MONSTA MELODIC — OOMPH REDESIGN
+   ========================================================= */
+:root{
+  --neon-pink:#ff48ef;
+  --electric-purple:#9f2cff;
+  --violet-deep:#2f2067;
+  --acid-lav:#c4b6ff;
+  --monster-black:#171126;
+  --glass:rgba(255,255,255,.62);
+}
+
+body{
+  position:relative;
+  isolation:isolate;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-4;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 15%,rgba(255,72,239,.13),transparent 23%),
+    radial-gradient(circle at 82% 76%,rgba(159,44,255,.16),transparent 27%);
+}
+.shell{
+  position:relative;
+  z-index:2;
+  box-shadow:
+    0 34px 100px rgba(29,19,72,.36),
+    0 0 0 1px rgba(255,255,255,.24) inset;
+}
+header{
+  background:rgba(201,185,242,.88);
+  backdrop-filter:blur(18px) saturate(1.18);
+  -webkit-backdrop-filter:blur(18px) saturate(1.18);
+}
+.brand-logo{
+  filter:drop-shadow(0 5px 8px rgba(49,38,101,.18));
+  transition:transform .28s cubic-bezier(.2,.8,.2,1);
+}
+.brand:hover .brand-logo{transform:rotate(-5deg) scale(1.08)}
+nav a{transition:transform .2s ease,color .2s ease}
+nav a:hover{transform:translateY(-2px);color:var(--pink)}
+
+.hero-main,.applications-hero,.idol-app-hero{
+  position:relative;
+}
+.hero-main::after,.applications-hero::before,.idol-app-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.18) 43%,transparent 48% 100%);
+  transform:translateX(-100%);
+  animation:heroSweep 8s ease-in-out infinite 2s;
+}
+@keyframes heroSweep{
+  0%,58%,100%{transform:translateX(-115%)}
+  72%{transform:translateX(115%)}
+}
+.hero-logo,.applications-logo img,.idol-app-logo img{
+  animation:logoFloat 5.5s ease-in-out infinite;
+  filter:drop-shadow(0 16px 18px rgba(49,38,101,.16));
+}
+@keyframes logoFloat{
+  0%,100%{transform:translateY(0) rotate(-.5deg)}
+  50%{transform:translateY(-10px) rotate(.6deg)}
+}
+.hero-copy h1 span,
+.applications-intro h1 span,
+.idol-app-intro h1 span{
+  background:linear-gradient(90deg,var(--pink),#ff6bd8,var(--electric-purple),var(--pink));
+  background-size:220% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent!important;
+  animation:monsterGradient 6s linear infinite;
+}
+@keyframes monsterGradient{to{background-position:220% 0}}
+
+.btn{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  z-index:-1;
+  background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.5) 46%,transparent 60%);
+  transform:translateX(-120%);
+  transition:transform .5s ease;
+}
+.btn:hover::after{transform:translateX(120%)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(49,38,101,.16)}
+.primary{
+  box-shadow:0 8px 0 rgba(32,23,63,.18);
+}
+.primary:hover{box-shadow:0 11px 0 rgba(32,23,63,.14)}
+
+.heading h2,.events h2,.auditions h2,.about h2,.contact h2,
+.applications-heading h2,.idol-info-heading h2{
+  text-shadow:0 5px 0 rgba(102,80,173,.08);
+}
+.section,.applications-section,.idol-info-section{
+  position:relative;
+}
+.section::before,.applications-section::before,.idol-info-section::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;height:13px;
+  opacity:.28;
+  background:
+    radial-gradient(circle at 10px -2px,var(--ink) 0 8px,transparent 9px) 0 0/28px 14px repeat-x;
+  pointer-events:none;
+}
+
+/* monster eyes */
+.monster-eyes{
+  position:absolute;
+  z-index:1;
+  display:flex;
+  gap:12px;
+  pointer-events:none;
+  opacity:.27;
+  filter:drop-shadow(0 0 12px rgba(216,75,228,.25));
+}
+.monster-eyes span{
+  width:38px;height:25px;
+  border:3px solid var(--ink);
+  border-radius:50% 50% 44% 44%;
+  background:rgba(255,255,255,.66);
+  display:grid;place-items:center;
+  transform:rotate(-6deg);
+  animation:monsterBlink 5.2s infinite;
+}
+.monster-eyes span:nth-child(2){transform:rotate(6deg);animation-delay:.08s}
+.monster-eyes i{
+  width:9px;height:13px;
+  border-radius:50%;
+  background:var(--pink);
+  box-shadow:0 0 9px rgba(216,75,228,.65);
+  animation:pupilLook 7s ease-in-out infinite;
+}
+.monster-eyes-1{right:7%;top:12%}
+.monster-eyes-2{right:6%;bottom:13%}
+.monster-eyes-3{left:8%;bottom:13%}
+@keyframes monsterBlink{
+  0%,44%,48%,100%{transform:scaleY(1)}
+  46%{transform:scaleY(.08)}
+}
+@keyframes pupilLook{
+  0%,100%{transform:translateX(-4px)}
+  50%{transform:translateX(4px)}
+}
+
+/* Member cards */
+.idol-member-card{
+  --tilt-x:0deg;--tilt-y:0deg;
+  transform:perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition:transform .16s ease,filter .22s ease;
+}
+.idol-member-card:hover{filter:drop-shadow(0 16px 16px rgba(49,38,101,.13))}
+.idol-photo{
+  transition:transform .28s ease,box-shadow .28s ease;
+}
+.idol-member-card:hover .idol-photo{
+  transform:translateY(-5px);
+  box-shadow:10px 14px 0 rgba(49,38,101,.15);
+}
+.idol-photo::selection{background:transparent}
+
+/* Application cards */
+.kaiju-application,.requirement-card{
+  --tilt-x:0deg;--tilt-y:0deg;
+  transform:perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+}
+.kaiju-application::after{
+  content:"";
+  position:absolute;
+  left:15%;right:15%;bottom:-8px;height:14px;
+  background:
+    radial-gradient(circle at 10px 0,#fff 0 6px,transparent 7px) 0 0/24px 14px repeat-x;
+  opacity:.18;
+  pointer-events:none;
+}
+.horn,.apply-horn{filter:drop-shadow(0 5px 0 rgba(49,38,101,.08))}
+
+/* Accordion polish */
+.idol-accordion summary{
+  position:relative;
+  overflow:hidden;
+}
+.idol-accordion summary::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.3) 47%,transparent 62%);
+  transform:translateX(-120%);
+  transition:transform .6s ease;
+}
+.idol-accordion summary:hover::before{transform:translateX(120%)}
+
+/* ambient */
+.monster-ambient{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  overflow:hidden;
+}
+.goo-orb{
+  position:absolute;
+  border-radius:42% 58% 63% 37% / 52% 44% 56% 48%;
+  filter:blur(1px);
+  opacity:.22;
+  animation:gooMorph 13s ease-in-out infinite alternate;
+}
+.goo-a{width:230px;height:230px;left:-75px;top:18%;background:#ff56df}
+.goo-b{width:320px;height:320px;right:-110px;top:48%;background:#7e56d1;animation-delay:-4s}
+.goo-c{width:180px;height:180px;left:17%;bottom:-90px;background:#b494ff;animation-delay:-7s}
+@keyframes gooMorph{
+  0%{transform:translate3d(0,0,0) rotate(0deg);border-radius:42% 58% 63% 37% / 52% 44% 56% 48%}
+  100%{transform:translate3d(22px,-24px,0) rotate(17deg);border-radius:61% 39% 42% 58% / 37% 61% 39% 63%}
+}
+.ambient-spark{
+  position:absolute;
+  color:#fff;
+  text-shadow:0 0 18px rgba(216,75,228,.6);
+  opacity:.36;
+  animation:sparkDrift 9s ease-in-out infinite;
+}
+.spark-1{left:4%;top:66%;font-size:1.7rem}
+.spark-2{right:5%;top:23%;font-size:1.25rem;animation-delay:-3s}
+.spark-3{right:15%;bottom:7%;font-size:1rem;animation-delay:-6s}
+@keyframes sparkDrift{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-18px) rotate(18deg)}
+}
+
+/* cursor aura */
+.cursor-aura{
+  position:fixed;
+  left:-18px;top:-18px;
+  width:36px;height:36px;
+  z-index:10000;
+  border-radius:50%;
+  pointer-events:none;
+  border:1px solid rgba(216,75,228,.38);
+  box-shadow:0 0 22px rgba(216,75,228,.18);
+  transition:width .18s ease,height .18s ease,margin .18s ease,background .18s ease;
+  mix-blend-mode:multiply;
+}
+.cursor-aura.is-hot{
+  width:54px;height:54px;
+  margin:-9px 0 0 -9px;
+  background:rgba(216,75,228,.08);
+}
+
+/* page transitions */
+body{
+  transition:opacity .26s ease,transform .26s ease;
+}
+body.page-leaving{
+  opacity:0;
+  transform:scale(.992);
+}
+
+/* LOADER */
+body.is-loading{overflow:hidden}
+.monsta-loader{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(159,44,255,.32),transparent 27%),
+    linear-gradient(145deg,#151024,#281a58 52%,#3c236c);
+  transition:opacity .7s ease,visibility .7s ease,transform .7s cubic-bezier(.7,0,.2,1);
+}
+.monsta-loader::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    repeating-conic-gradient(from 0deg,rgba(255,255,255,.035) 0 7deg,transparent 7deg 18deg);
+  animation:loaderSpin 28s linear infinite;
+}
+@keyframes loaderSpin{to{transform:rotate(360deg)}}
+.monsta-loader.loader-exit{
+  opacity:0;
+  visibility:hidden;
+  transform:scale(1.04);
+}
+.loader-inner{
+  width:min(520px,84vw);
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+.loader-logo-shell{
+  width:min(260px,55vw);
+  aspect-ratio:1;
+  margin:0 auto 18px;
+  display:grid;
+  place-items:center;
+  position:relative;
+}
+.loader-logo-shell img{
+  width:88%;
+  position:relative;
+  z-index:2;
+  animation:loaderLogo 1.2s cubic-bezier(.2,.8,.2,1) both;
+  filter:drop-shadow(0 18px 25px rgba(0,0,0,.24));
+}
+@keyframes loaderLogo{
+  from{opacity:0;transform:scale(.72) rotate(-8deg)}
+  to{opacity:1;transform:scale(1) rotate(0)}
+}
+.loader-ring{
+  position:absolute;
+  inset:8%;
+  border:2px dashed rgba(255,255,255,.33);
+  border-radius:50%;
+  animation:loaderRing 8s linear infinite;
+}
+.ring-two{
+  inset:0;
+  border-style:solid;
+  border-color:rgba(255,72,239,.24);
+  animation-direction:reverse;
+  animation-duration:11s;
+}
+@keyframes loaderRing{to{transform:rotate(360deg)}}
+.loader-kicker{
+  font:800 .72rem "Baloo 2";
+  letter-spacing:.28em;
+  color:#e2d7ff;
+}
+.loader-inner h2{
+  font:800 clamp(1.35rem,4vw,2rem) "Baloo 2";
+  letter-spacing:.03em;
+  margin:8px 0 19px;
+}
+.loader-dots{
+  display:inline-block;
+  width:28px;
+  overflow:hidden;
+  vertical-align:bottom;
+  animation:loaderDots 1.2s steps(4,end) infinite;
+}
+@keyframes loaderDots{0%{width:0}100%{width:28px}}
+.loader-track{
+  width:100%;
+  height:7px;
+  border:1px solid rgba(255,255,255,.26);
+  border-radius:999px;
+  padding:1px;
+  background:rgba(255,255,255,.05);
+}
+.loader-track span{
+  display:block;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#ff4be9,#a838ff,#c7b8ff);
+  transform-origin:left;
+  animation:loaderProgress 1.35s cubic-bezier(.3,.8,.3,1) forwards;
+  box-shadow:0 0 18px rgba(255,72,239,.5);
+}
+@keyframes loaderProgress{
+  from{transform:scaleX(.03)}
+  to{transform:scaleX(1)}
+}
+.loader-status{
+  margin-top:12px;
+  font:700 .62rem "Baloo 2";
+  letter-spacing:.18em;
+  opacity:.62;
+}
+.loader-creature{
+  position:absolute;
+  width:160px;height:110px;
+  opacity:.15;
+}
+.loader-creature::before{
+  content:"";
+  position:absolute;
+  inset:20px 0 0;
+  background:#fff;
+  border-radius:50% 50% 42% 42%;
+}
+.loader-creature::after{
+  content:"";
+  position:absolute;
+  left:17px;right:17px;bottom:-20px;height:45px;
+  background:
+    radial-gradient(circle at 14px 0,#fff 0 14px,transparent 15px) 0 0/42px 45px repeat-x;
+}
+.loader-creature i{
+  position:absolute;
+  top:50px;
+  z-index:2;
+  width:18px;height:24px;
+  background:#271950;
+  border-radius:50%;
+  animation:monsterBlink 4s infinite;
+}
+.loader-creature i:first-child{left:45px}
+.loader-creature i:last-child{right:45px}
+.loader-creature-left{left:-42px;bottom:5%;transform:rotate(8deg)}
+.loader-creature-right{right:-38px;top:8%;transform:rotate(-12deg) scale(.8)}
+
+@media(max-width:680px){
+  .monster-eyes{opacity:.18;transform:scale(.78)}
+  .cursor-aura{display:none}
+  .loader-creature{opacity:.08}
+}
+
+/* Respect accessibility preferences */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+  .cursor-aura{display:none}
+}
