@@ -2,16 +2,24 @@ const menu = document.querySelector(".menu");
 const nav = document.querySelector("nav");
 
 if (menu && nav) {
+  const closeMobileNav = () => {
+    nav.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
+  };
+
   menu.addEventListener("click", () => {
     const open = nav.classList.toggle("open");
     menu.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("nav-open", open);
   });
 
   nav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      menu.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMobileNav);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1000) closeMobileNav();
   });
 }
 
@@ -201,14 +209,34 @@ document.querySelectorAll(".idol-member-card, .kaiju-application, .requirement-c
   });
 });
 
-/* Smooth internal page transition, without hijacking anchors/external links */
-document.querySelectorAll('a[href$=".html"], a[href*=".html#"]').forEach(link => {
+/* Smooth cross-page transition. Hash links on the current page stay native. */
+document.querySelectorAll('a[href]').forEach(link => {
   link.addEventListener("click", e => {
-    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || link.target === "_blank") return;
-    const href = link.getAttribute("href");
-    if (!href) return;
+    if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || link.target === "_blank") return;
+    const raw = link.getAttribute("href");
+    if (!raw || raw === "#" || raw.startsWith("mailto:") || raw.startsWith("tel:")) return;
+
+    let target;
+    try { target = new URL(raw, window.location.href); } catch { return; }
+
+    // Never fade the page for same-document anchors such as #news or index.html#events.
+    const sameDocument = target.origin === location.origin && target.pathname === location.pathname;
+    if (sameDocument) return;
+
+    // Only animate internal HTML navigation. External links remain normal.
+    if (target.origin !== location.origin || !target.pathname.endsWith(".html")) return;
+
     e.preventDefault();
     document.body.classList.add("page-leaving");
-    window.setTimeout(() => window.location.href = href, 260);
+    window.setTimeout(() => { window.location.href = target.href; }, 220);
   });
+});
+
+/* Safari/iOS and browser back-forward cache can restore the previous body classes.
+   Always reset them when a page becomes visible again. */
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("page-leaving", "nav-open", "is-loading");
+  if (nav) nav.classList.remove("open");
+  if (menu) menu.setAttribute("aria-expanded", "false");
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
 });
