@@ -1361,3 +1361,318 @@ body:not(.page-leaving){opacity:1!important;transform:none!important}
     transform-origin:bottom right;
   }
 }
+
+
+/* =========================================================
+   TITLE CLIPPING + DEDICATED MEMBERS PAGE UPDATE
+   ========================================================= */
+
+/* Keep the big branded titles inside their cards/viewport.
+   The small inline padding prevents rounded Baloo glyphs from being clipped
+   against an overflow boundary. */
+.hero-copy,
+.applications-intro,
+.idol-app-intro,
+.calendar-hero-copy,
+.members-page-hero-copy{
+  min-width:0;
+  max-width:100%;
+}
+
+.hero-copy h1,
+.applications-intro h1,
+.idol-app-intro h1,
+.calendar-hero-copy h1,
+.members-page-hero-copy h1{
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  padding-inline:.10em;
+  overflow:visible;
+  overflow-wrap:normal;
+  word-break:normal;
+  text-wrap:balance;
+}
+
+.hero-copy h1{
+  font-size:clamp(2rem,3.45vw,3.35rem);
+  max-width:760px;
+  margin-inline:auto;
+}
+
+@media(max-width:680px){
+  .hero-copy h1{
+    font-size:clamp(2rem,8.2vw,2.95rem)!important;
+    padding-inline:.14em!important;
+  }
+
+  .applications-intro h1,
+  .idol-app-intro h1,
+  .calendar-hero-copy h1,
+  .members-page-hero-copy h1{
+    padding-inline:.12em;
+  }
+}
+
+/* Homepage member teaser */
+.members-home-teaser{
+  min-height:560px;
+  padding:78px 7%;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:7%;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(216,75,228,.17),transparent 23%),
+    radial-gradient(circle at 86% 80%,rgba(102,80,173,.18),transparent 25%),
+    linear-gradient(145deg,#f8f5ff,#eee7ff);
+  border-bottom:1px solid var(--line);
+}
+
+.members-home-teaser::after{
+  content:"01 ✦ 02 ✦ 03 ✦ 04 ✦ 05 ✦ MONSTA MELODIC";
+  position:absolute;
+  left:-12px;
+  bottom:20px;
+  white-space:nowrap;
+  font:800 .72rem "Baloo 2";
+  letter-spacing:.18em;
+  opacity:.13;
+}
+
+.members-teaser-copy h2{
+  font:800 clamp(3.7rem,7vw,6.6rem)/.82 "Baloo 2";
+  letter-spacing:-.065em;
+  margin:12px 0 24px;
+}
+
+.members-teaser-copy h2 span{
+  background:linear-gradient(90deg,var(--pink),#ff6bd8,#9f2cff,var(--pink));
+  background-size:220% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:monsterGradient 6s linear infinite;
+}
+
+.members-teaser-copy>p:not(.eyebrow){
+  max-width:580px;
+  line-height:1.75;
+  margin-bottom:28px;
+}
+
+.members-teaser-art{
+  min-height:370px;
+  display:grid;
+  place-items:center;
+}
+
+.member-orbit-stack{
+  width:min(390px,80vw);
+  aspect-ratio:1;
+  position:relative;
+  display:grid;
+  place-items:center;
+  border:3px dashed rgba(49,38,101,.18);
+  border-radius:50%;
+}
+
+.member-orbit-stack::before,
+.member-orbit-stack::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:2px solid rgba(216,75,228,.15);
+}
+.member-orbit-stack::before{inset:10%}
+.member-orbit-stack::after{inset:-8%}
+
+.member-orbit-stack img{
+  width:56%;
+  position:relative;
+  z-index:4;
+  filter:drop-shadow(0 15px 16px rgba(49,38,101,.16));
+  animation:logoFloat 5.5s ease-in-out infinite;
+}
+
+.teaser-head{
+  position:absolute;
+  z-index:3;
+  width:66px;
+  height:66px;
+  border-radius:50%;
+  border:3px solid var(--ink);
+  box-shadow:5px 6px 0 rgba(49,38,101,.12);
+}
+.teaser-head::after{
+  content:"";
+  position:absolute;
+  width:108%;
+  height:82%;
+  left:-4%;
+  bottom:-45%;
+  border-radius:48% 48% 20% 20%;
+  background:inherit;
+  border:3px solid var(--ink);
+  z-index:-1;
+}
+.head-1{left:2%;top:42%;background:#e2a1df}
+.head-2{left:22%;top:2%;background:#bca9ec}
+.head-3{right:22%;top:2%;background:#a8cceb}
+.head-4{right:2%;top:42%;background:#e4a0a8}
+.head-5{left:41%;bottom:0;background:#b8dfb4}
+
+/* Members page hero */
+.members-page-main{
+  background:linear-gradient(180deg,#faf8ff,#f0ecff);
+}
+
+.members-page-hero{
+  min-height:610px;
+  padding:76px 7%;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:7%;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  border-bottom:5px solid var(--ink);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(240,138,248,.30),transparent 26%),
+    radial-gradient(circle at 14% 85%,rgba(102,80,173,.17),transparent 26%),
+    linear-gradient(145deg,#ddd7f0,#c9b9f2);
+}
+
+.members-page-hero-copy h1{
+  font:800 clamp(4rem,7.5vw,7rem)/.8 "Baloo 2";
+  letter-spacing:-.07em;
+  margin:14px 0 25px;
+}
+
+.members-page-hero-copy h1 span{
+  background:linear-gradient(90deg,var(--pink),#ff68d8,#9f2cff,var(--pink));
+  background-size:220% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:monsterGradient 6s linear infinite;
+}
+
+.members-page-hero-copy>p:not(.eyebrow){
+  max-width:620px;
+  line-height:1.75;
+  margin-bottom:27px;
+}
+
+.members-page-logo{
+  display:grid;
+  place-items:center;
+}
+
+.members-logo-orbit{
+  width:min(360px,75vw);
+  aspect-ratio:1;
+  position:relative;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:3px dashed rgba(49,38,101,.24);
+  animation:calendarOrbit 20s linear infinite;
+}
+
+.members-logo-orbit img{
+  width:70%;
+  animation:calendarCounterOrbit 20s linear infinite,logoFloat 5.5s ease-in-out infinite;
+  filter:drop-shadow(0 15px 20px rgba(49,38,101,.16));
+}
+
+.members-logo-orbit span{
+  position:absolute;
+  width:42px;height:42px;
+  display:grid;place-items:center;
+  border:2px solid var(--ink);
+  border-radius:50%;
+  background:#fff;
+  font:800 .68rem "Baloo 2";
+  box-shadow:4px 5px 0 rgba(49,38,101,.10);
+}
+.members-logo-orbit span:nth-of-type(1){top:-4%;left:44%}
+.members-logo-orbit span:nth-of-type(2){right:2%;top:26%}
+.members-logo-orbit span:nth-of-type(3){right:13%;bottom:7%}
+.members-logo-orbit span:nth-of-type(4){left:13%;bottom:7%}
+.members-logo-orbit span:nth-of-type(5){left:2%;top:26%}
+
+.members-page-roster{
+  padding-top:92px;
+}
+
+/* Make five-member desktop roster a little more editorial on its own page */
+@media(min-width:901px){
+  .members-page-roster .idol-member-grid{
+    gap:54px 28px;
+  }
+}
+
+@media(max-width:900px){
+  .members-home-teaser,
+  .members-page-hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .members-home-teaser{
+    padding-top:66px;
+  }
+
+  .members-teaser-copy{
+    order:1;
+  }
+
+  .members-teaser-art{
+    order:2;
+    min-height:300px;
+  }
+
+  .members-teaser-copy>p:not(.eyebrow),
+  .members-page-hero-copy>p:not(.eyebrow){
+    margin-inline:auto;
+  }
+
+  .members-page-logo{
+    margin-top:10px;
+  }
+}
+
+@media(max-width:600px){
+  .members-home-teaser{
+    padding:62px 20px 82px;
+  }
+
+  .members-teaser-copy h2{
+    font-size:clamp(3.2rem,15vw,4.7rem);
+  }
+
+  .members-page-hero{
+    min-height:auto;
+    padding:58px 20px 78px;
+  }
+
+  .members-page-hero-copy h1{
+    font-size:clamp(3.15rem,15vw,4.8rem);
+  }
+
+  .member-orbit-stack{
+    width:min(300px,78vw);
+  }
+
+  .teaser-head{
+    width:52px;
+    height:52px;
+  }
+
+  .members-page-roster{
+    padding-top:72px!important;
+  }
+}
