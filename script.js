@@ -92,14 +92,11 @@ document.addEventListener("keydown", event => {
   }
 });
 
-/* Auto-open Discord once per browser session, after the loader finishes. */
+/* Auto-open Discord after the homepage finishes loading. */
 window.addEventListener("load", () => {
-  if (!sessionStorage.getItem("monstaDiscordShown")) {
-    window.setTimeout(() => {
-      openDiscordModal();
-      sessionStorage.setItem("monstaDiscordShown", "1");
-    }, 4200);
-  }
+  window.setTimeout(() => {
+    openDiscordModal();
+  }, 4200);
 });
 
 

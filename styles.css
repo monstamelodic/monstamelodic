@@ -2020,3 +2020,32 @@ body:not(.page-leaving){opacity:1!important;transform:none!important}
     margin-right: auto;
   }
 }
+
+
+/* =========================================================
+   HOMEPAGE ROSTER LOGO — TRUE CENTER FIX
+   Keep the logo centered even while it floats.
+   ========================================================= */
+.sparkle-orbit img{
+  left:50% !important;
+  top:50% !important;
+  transform:translate(-50%,-50%) !important;
+  animation:rosterLogoFloatCentered 5.5s ease-in-out infinite !important;
+  transform-origin:center center !important;
+}
+
+@keyframes rosterLogoFloatCentered{
+  0%,100%{
+    transform:translate(-50%,-50%) translateY(0) rotate(-1deg);
+  }
+  50%{
+    transform:translate(-50%,-50%) translateY(-9px) rotate(1deg);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .sparkle-orbit img{
+    animation:none !important;
+    transform:translate(-50%,-50%) !important;
+  }
+}
