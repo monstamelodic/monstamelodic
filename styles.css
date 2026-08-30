@@ -1676,3 +1676,180 @@ body:not(.page-leaving){opacity:1!important;transform:none!important}
     padding-top:72px!important;
   }
 }
+
+
+/* =========================================================
+   PUNCTUATION CLIPPING FIX + HOMEPAGE SPARKLE ROSTER
+   ========================================================= */
+
+/* Give oversized display text actual breathing room on both edges. */
+.hero-copy,
+.applications-intro,
+.idol-app-intro,
+.calendar-hero-copy,
+.members-page-hero-copy,
+.members-teaser-copy{
+  box-sizing:border-box;
+  min-width:0;
+  max-width:100%;
+  padding-inline:clamp(22px, 2.5vw, 42px);
+  overflow:visible !important;
+}
+
+.hero-copy h1,
+.applications-intro h1,
+.idol-app-intro h1,
+.calendar-hero-copy h1,
+.members-page-hero-copy h1,
+.members-teaser-copy h2{
+  box-sizing:border-box;
+  width:auto !important;
+  max-width:100% !important;
+  margin-inline:auto !important;
+  padding-inline:.20em !important;
+  overflow:visible !important;
+  white-space:normal !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-wrap:balance;
+}
+
+/* The previous very tight tracking could push the rounded final period outside
+   its text box. This keeps the chunky style without cutting the punctuation. */
+.hero-copy h1,
+.applications-intro h1,
+.idol-app-intro h1,
+.calendar-hero-copy h1,
+.members-page-hero-copy h1{
+  letter-spacing:-.025em !important;
+}
+
+/* Keep the large typography dramatic while fitting safely in its card. */
+.hero-copy h1{
+  font-size:clamp(2rem, 3.05vw, 3.25rem) !important;
+}
+
+.applications-intro h1,
+.idol-app-intro h1,
+.calendar-hero-copy h1,
+.members-page-hero-copy h1{
+  font-size:clamp(3.15rem, 5.7vw, 5.85rem) !important;
+}
+
+/* Sparkle treatment around the logo. */
+.sparkle-orbit{
+  position:relative;
+  border:2px dashed rgba(49,38,101,.15) !important;
+  background:
+    radial-gradient(circle at center,
+      rgba(255,255,255,.78) 0%,
+      rgba(246,226,255,.42) 38%,
+      rgba(255,255,255,.08) 67%,
+      transparent 72%) !important;
+  box-shadow:
+    0 0 0 22px rgba(216,75,228,.035),
+    0 0 72px rgba(159,44,255,.10);
+}
+
+.sparkle-orbit::before,
+.sparkle-orbit::after{
+  border-color:rgba(216,75,228,.13) !important;
+}
+
+.sparkle-orbit img{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:61% !important;
+  height:auto;
+  transform:translate(-50%,-50%);
+  z-index:5;
+  filter:
+    drop-shadow(0 14px 15px rgba(49,38,101,.16))
+    drop-shadow(0 0 20px rgba(216,75,228,.12));
+}
+
+/* Hide old silhouettes even if the browser has partially cached markup/styles. */
+.sparkle-orbit .teaser-head{
+  display:none !important;
+}
+
+.roster-spark{
+  position:absolute;
+  z-index:4;
+  line-height:1;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  text-shadow:
+    2px 2px 0 #d84be4,
+    -1px -1px 0 #6d43d8,
+    0 0 18px rgba(216,75,228,.48);
+  animation:rosterTwinkle 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.rs-1{left:11%; top:18%; font-size:clamp(25px,4vw,44px);}
+.rs-2{left:43%; top:5%; font-size:clamp(18px,3vw,32px); animation-delay:.45s;}
+.rs-3{right:12%; top:19%; font-size:clamp(18px,3.2vw,34px); animation-delay:.9s;}
+.rs-4{right:5%; top:50%; font-size:clamp(25px,4vw,44px); animation-delay:1.35s;}
+.rs-5{right:20%; bottom:10%; font-size:clamp(19px,3vw,34px); animation-delay:1.8s;}
+.rs-6{left:18%; bottom:10%; font-size:clamp(25px,4vw,43px); animation-delay:2.25s;}
+.rs-7{left:5%; top:51%; font-size:clamp(17px,3vw,31px); animation-delay:2.7s;}
+
+.roster-dot{
+  position:absolute;
+  z-index:3;
+  width:9px;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:#d84be4;
+  box-shadow:0 0 13px rgba(216,75,228,.48);
+  animation:rosterTwinkle 3.8s ease-in-out infinite reverse;
+}
+.rd-1{left:28%; top:11%;}
+.rd-2{right:27%; bottom:13%; animation-delay:.8s;}
+.rd-3{left:10%; bottom:32%; animation-delay:1.6s;}
+
+@keyframes rosterTwinkle{
+  0%,100%{transform:scale(.82) rotate(-8deg); opacity:.48;}
+  50%{transform:scale(1.16) rotate(8deg); opacity:1;}
+}
+
+@media (max-width:700px){
+  .hero-copy,
+  .applications-intro,
+  .idol-app-intro,
+  .calendar-hero-copy,
+  .members-page-hero-copy,
+  .members-teaser-copy{
+    padding-inline:18px;
+  }
+
+  .hero-copy h1,
+  .applications-intro h1,
+  .idol-app-intro h1,
+  .calendar-hero-copy h1,
+  .members-page-hero-copy h1,
+  .members-teaser-copy h2{
+    padding-inline:.16em !important;
+    max-width:calc(100vw - 48px) !important;
+  }
+
+  .applications-intro h1,
+  .idol-app-intro h1,
+  .calendar-hero-copy h1,
+  .members-page-hero-copy h1{
+    font-size:clamp(2.7rem, 13vw, 4.35rem) !important;
+  }
+
+  .sparkle-orbit img{
+    width:58% !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .roster-spark,
+  .roster-dot{
+    animation:none !important;
+  }
+}
