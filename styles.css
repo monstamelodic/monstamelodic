@@ -1962,3 +1962,61 @@ body:not(.page-leaving){opacity:1!important;transform:none!important}
     padding-right:.24em !important;
   }
 }
+
+
+/* =========================================================
+   HOMEPAGE MEMBERS FEATURE — CENTERED
+   Centers the full "Meet the Monsters" feature in its section
+   without affecting members.html.
+   ========================================================= */
+
+.members-teaser{
+  max-width: 1500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  grid-template-columns: minmax(420px, 1fr) minmax(520px, 1fr) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(3rem, 6vw, 7rem) !important;
+  padding-left: clamp(32px, 5vw, 80px) !important;
+  padding-right: clamp(32px, 5vw, 80px) !important;
+}
+
+.members-teaser-art{
+  justify-self: center !important;
+  align-self: center !important;
+}
+
+.members-teaser-copy{
+  justify-self: center !important;
+  align-self: center !important;
+  width: 100% !important;
+  max-width: 680px !important;
+}
+
+@media (max-width: 900px){
+  .members-teaser{
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .members-teaser-art,
+  .members-teaser-copy{
+    justify-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .members-teaser-copy{
+    max-width: 680px !important;
+  }
+
+  .members-teaser-copy .btn,
+  .members-teaser-copy a{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
