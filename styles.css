@@ -1853,3 +1853,112 @@ body:not(.page-leaving){opacity:1!important;transform:none!important}
     animation:none !important;
   }
 }
+
+
+/* =========================================================
+   FINAL GLOBAL DISPLAY-TYPE PUNCTUATION FIX
+   Applies to homepage, members.html, calendar.html,
+   idol-applications.html, and volunteer applications.
+   ========================================================= */
+
+/*
+  The gradient words use background-clip:text. On rounded Baloo 2 glyphs,
+  browsers can clip the outer antialiasing of periods and terminal curves
+  at the inline span's own paint box even when the H1 itself has overflow
+  visible. Give the GRADIENT SPAN its own padded inline-block paint area.
+*/
+.hero-copy h1 span,
+.members-teaser-copy h2 span,
+.members-page-hero-copy h1 span,
+.calendar-hero-copy h1 span,
+.idol-app-intro h1 span,
+.applications-intro h1 span{
+  display:inline-block !important;
+  box-sizing:content-box !important;
+  padding-left:.08em !important;
+  padding-right:.22em !important;
+  padding-top:.04em !important;
+  padding-bottom:.08em !important;
+  margin-left:-.08em !important;
+  margin-right:-.06em !important;
+  overflow:visible !important;
+  line-height:inherit !important;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+
+/* Give every major display heading a safe paint gutter too. */
+.hero-copy h1,
+.members-teaser-copy h2,
+.members-page-hero-copy h1,
+.calendar-hero-copy h1,
+.idol-app-intro h1,
+.applications-intro h1{
+  padding-left:.28em !important;
+  padding-right:.34em !important;
+  margin-left:-.10em !important;
+  margin-right:-.10em !important;
+  max-width:calc(100% + .20em) !important;
+  overflow:visible !important;
+  text-rendering:geometricPrecision;
+}
+
+/* Do not crop title paint at the immediate content-column level. */
+.hero-copy,
+.members-teaser-copy,
+.members-page-hero-copy,
+.calendar-hero-copy,
+.idol-app-intro,
+.applications-intro{
+  overflow:visible !important;
+}
+
+/*
+  The hero panels still hide decorative backgrounds horizontally, but give
+  their text content a little extra inner gutter so the final punctuation
+  never reaches the physical panel edge.
+*/
+.hero-main,
+.members-page-hero,
+.calendar-hero,
+.idol-app-hero,
+.applications-hero{
+  padding-left:max(7%,32px);
+  padding-right:max(7%,32px);
+}
+
+/* Calendar/member/idol display titles were closest to the edge on desktop. */
+@media(min-width:901px){
+  .members-page-hero-copy h1,
+  .calendar-hero-copy h1,
+  .idol-app-intro h1,
+  .applications-intro h1{
+    font-size:clamp(3.1rem,5.35vw,5.55rem) !important;
+  }
+}
+
+/* Mobile: retain the same punctuation gutter without forcing overflow. */
+@media(max-width:700px){
+  .hero-copy h1,
+  .members-teaser-copy h2,
+  .members-page-hero-copy h1,
+  .calendar-hero-copy h1,
+  .idol-app-intro h1,
+  .applications-intro h1{
+    width:auto !important;
+    max-width:calc(100vw - 36px) !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding-left:.18em !important;
+    padding-right:.26em !important;
+  }
+
+  .hero-copy h1 span,
+  .members-teaser-copy h2 span,
+  .members-page-hero-copy h1 span,
+  .calendar-hero-copy h1 span,
+  .idol-app-intro h1 span,
+  .applications-intro h1 span{
+    padding-right:.24em !important;
+  }
+}
