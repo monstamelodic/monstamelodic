@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="118" viewBox="0 0 600 118">
+  <defs><linearGradient id="slime" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a7f488"/><stop offset=".44" stop-color="#81e787"/><stop offset="1" stop-color="#4abf70"/></linearGradient></defs>
+  <path fill="url(#slime)" d="M0 -2H600V31 C582 28 568 33 551 34 C539 35 536 43 536 54 V85 C536 101 529 111 520 111 C511 111 505 101 505 85 V49 C505 38 500 36 487 35 C468 33 462 29 443 31 C429 32 425 36 425 45 V65 C425 79 419 87 411 87 C402 87 396 79 396 65 V44 C396 33 385 32 371 33 C354 35 345 32 328 31 C314 31 310 37 310 48 V97 C310 108 304 115 296 115 C288 115 282 108 282 97 V46 C282 36 276 32 261 32 C244 32 234 34 218 33 C204 32 199 39 199 49 V69 C199 82 193 91 184 91 C175 91 169 82 169 69 V46 C169 36 162 33 148 34 C135 35 127 31 113 32 C101 33 96 37 96 46 V79 C96 93 89 101 80 101 C71 101 65 93 65 79 V45 C65 34 58 32 44 34 C29 36 15 29 0 31 Z"/>
+  <path fill="none" stroke="#e6ffd1" stroke-width="3" stroke-linecap="round" opacity=".75" d="M19 13 Q47 19 71 14 M117 13 Q146 17 166 14 M212 13 Q241 18 267 14 M322 13 Q350 18 375 14 M442 13 Q468 17 492 14 M551 13 Q571 16 587 13"/>
+  <path fill="none" stroke="#d5ffc6" stroke-width="2" stroke-linecap="round" opacity=".56" d="M78 55 V78 M182 48 V68 M296 59 V93 M410 44 V63 M520 51 V84"/>
+</svg>
