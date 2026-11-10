@@ -126,7 +126,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const loader = document.createElement('div');
   loader.className = 'monsta-loader';
   loader.setAttribute('aria-hidden', 'true');
-  loader.innerHTML = '<div class="loader-core"><img src="Logo.png" alt=""><p>SUMMONING THE MONSTERS ✧</p><div class="loader-track"><span></span></div></div>';
+  loader.innerHTML = '<div class="loader-core"><img src="Logo.png" alt=""><p>SUMMONING THE MONSTERS</p><div class="loader-track"><span></span></div></div>';
   document.body.prepend(loader);
   document.body.classList.add('loading');
   const start = performance.now();
@@ -157,7 +157,6 @@ if (discordButtons.length) {
     <div class="discord-panel" role="dialog" aria-modal="true" aria-labelledby="discord-title">
       <button class="discord-close" type="button" aria-label="Close Discord invitation" data-discord-close>×</button>
       <img class="modal-logo" src="Logo.png" alt="Monsta Melodic">
-      <span class="modal-eyes" aria-hidden="true">✦ ✧ ✦</span>
       <h2 id="discord-title">THE MONSTER CAVE AWAITS.</h2>
       <p>Come hang out, follow announcements and meet the Monsta Melodic community.</p>
       <a class="button dark" href="${discordInvite}" target="_blank" rel="noopener">Join our Discord <span>↗</span></a>
