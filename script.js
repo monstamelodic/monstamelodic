@@ -80,7 +80,7 @@ async function loadPosts() {
         const a = document.createElement('a'); a.className='news-tile'; a.href=postLink(post);
         const tag=document.createElement('span');tag.textContent=`${dateLabel(post.date)} / ${post.category || 'News'}`;
         const title=document.createElement('h3');title.textContent=post.title;
-        const more=document.createElement('span');more.textContent='Read story ↗';
+        const more=document.createElement('span');more.textContent='Read story ';
         a.append(tag,title,more);latest.append(a);
       });
     }
@@ -109,7 +109,7 @@ async function loadPosts() {
           const category=document.createElement('span');category.className='category';category.textContent=post.category || 'News';
           const title=document.createElement('h3');title.textContent=post.title;
           const excerpt=document.createElement('p');excerpt.textContent=post.excerpt || '';
-          const arrow=document.createElement('span');arrow.className='arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='↗';
+          const arrow=document.createElement('span');arrow.className='arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='';
           group.append(category,title,excerpt);a.append(time,group,arrow);archive.append(a);
         });
         if (!valid.length) archive.textContent='No updates have been published yet.';
@@ -159,7 +159,7 @@ if (discordButtons.length) {
       <img class="modal-logo" src="Logo.png" alt="Monsta Melodic">
       <h2 id="discord-title">THE MONSTER CAVE AWAITS.</h2>
       <p>Come hang out, follow announcements and meet the Monsta Melodic community.</p>
-      <a class="button dark" href="${discordInvite}" target="_blank" rel="noopener">Join our Discord <span>↗</span></a>
+      <a class="button dark" href="${discordInvite}" target="_blank" rel="noopener">Join our Discord <span></span></a>
       <button class="discord-later" type="button" data-discord-close>Maybe later</button>
     </div>`;
   document.body.append(modal);
@@ -195,11 +195,7 @@ if (discordButtons.length) {
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
   });
-  if (document.querySelector('.hero') && !wasSeen()) {
-    window.addEventListener('load', () => setTimeout(() => {
-      if (!wasSeen() && !document.hidden) open(null);
-    }, 4400), {once:true});
-  }
+
 }
 
 // Gentle entrance as sections come into view; content stays visible without JS.
@@ -212,3 +208,4 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   }, {threshold:.08});
   items.forEach(item => observer.observe(item));
 }
+

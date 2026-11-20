@@ -261,3 +261,39 @@ button, input, select, textarea { font-family: inherit; }
 @media (max-width: 620px) {
   .hero-sticker { width: 130px; opacity: .35; }
 }
+
+/* Monster arcade refresh. The existing content and member colors are retained. */
+
+
+
+
+
+.hero-copy{padding-bottom:70px}
+.hero-copy>.eyebrow{font-size:14px;letter-spacing:.09em}
+.button,.button.bright,.button.outline,.button.dark{position:relative;isolation:isolate;background:transparent;border:0;border-radius:0;box-shadow:none;min-height:80px;padding:22px 34px 29px;justify-content:center;gap:0;color:#211739;font-family:'Fredoka','Creato Display',sans-serif;font-weight:700;font-size:17px;letter-spacing:.015em;text-shadow:0 1px #ffffff40;transition:transform .18s,filter .18s}
+.button::before{content:"";position:absolute;inset:0;z-index:-1;background:url('arcade-button.svg') center/100% 100% no-repeat}
+.button.outline::before{filter:none;background-image:url('arcade-button-lilac.svg')}
+.button.dark::before{filter:none}
+.button::after{content:none!important}
+.button:hover{transform:translateY(-3px) rotate(-1deg);filter:brightness(1.1);box-shadow:none}
+.button:active{transform:translateY(4px);filter:brightness(.95)}
+.button-row{gap:12px;margin-top:32px}
+
+
+
+
+
+.art-label{font-size:13px;letter-spacing:.07em}
+.eyebrow{font-size:14px;letter-spacing:.08em}
+.site-header nav a,.header-social,.text-link{font-size:15px}
+.feature-card{border-radius:34px 14px 34px 14px;box-shadow:6px 7px 0 #9e48c755;transition:transform .25s}
+.feature-card:nth-child(2){border-radius:14px 34px 14px 34px}
+.feature-card:hover{transform:translateY(-6px) rotate(-1deg)}
+.feature-card>span:first-child{font-size:14px;letter-spacing:.04em}
+.social-card{border-radius:24px 24px 24px 6px}.social-card:nth-child(even){border-radius:24px 24px 6px 24px}
+.social-card>span:nth-child(2){font-size:14px;letter-spacing:.04em}.social-card small{font-size:14px}
+.text-link:hover{transform:translateY(-2px)}
+.marquee:hover .marquee-track,.marquee:focus-within .marquee-track{animation-play-state:paused}
+.hero-index,.member-number,.arrow{display:none}
+@media(max-width:620px){.button{min-height:73px;padding:20px 27px 26px;font-size:16px}.hero-copy{padding-bottom:25px}.hero-art{min-height:355px}.art-label{bottom:0;font-size:11px}.hero-copy>.eyebrow{font-size:12px}.button-row{gap:8px}}
+@media(prefers-reduced-motion:reduce){.monster-whisper,.brand-eye,.feature-card,.button{transition:none!important}.button:hover,.feature-card:hover{transform:none}}
