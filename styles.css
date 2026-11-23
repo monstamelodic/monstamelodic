@@ -297,3 +297,27 @@ button, input, select, textarea { font-family: inherit; }
 .hero-index,.member-number,.arrow{display:none}
 @media(max-width:620px){.button{min-height:73px;padding:20px 27px 26px;font-size:16px}.hero-copy{padding-bottom:25px}.hero-art{min-height:355px}.art-label{bottom:0;font-size:11px}.hero-copy>.eyebrow{font-size:12px}.button-row{gap:8px}}
 @media(prefers-reduced-motion:reduce){.monster-whisper,.brand-eye,.feature-card,.button{transition:none!important}.button:hover,.feature-card:hover{transform:none}}
+
+/* Millionth-visitor invitation: vintage web prize ad in Monsta's palette. */
+.discord-panel{max-width:540px;max-height:calc(100dvh - 32px);overflow:auto;padding:0;border:7px solid var(--violet);border-radius:3px;background:var(--cream);color:var(--ink);box-shadow:0 0 0 2px var(--lilac),10px 10px 0 #10092199}
+.discord-panel:before{content:none}
+.discord-panel .discord-close{position:sticky;float:right;top:6px;right:6px;margin:6px 6px -42px 0;width:34px;height:34px;background:var(--ink);color:var(--cream);border:2px solid var(--lilac);border-radius:2px;font:26px/1 sans-serif}
+.winner-border{padding:5px 36px 5px 8px;background:var(--ink);color:var(--lilac);font:italic bold 14px Georgia,serif;white-space:nowrap;overflow:hidden}
+.winner-copy{padding:18px 16px 12px;background:linear-gradient(135deg,#ef58e50b,transparent 60%)}
+.discord-panel .winner-rainbow{margin:0 0 8px;font:italic bold clamp(23px,5.5vw,39px)/1.15 Georgia,serif;letter-spacing:-.06em;-webkit-text-stroke:0;text-shadow:none;background:linear-gradient(90deg,#d52a72,#a554cf,#426ac4,#267853,#aa790b,#d85b35,#d52a72);background-size:250% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:winnerRainbow 3s linear infinite,winnerWiggle 2s ease-in-out infinite}
+.discord-panel .winner-won{margin:0 -7px 10px;padding:2px 8px;background:#b6f7b8;color:var(--ink);font:italic 900 clamp(44px,10vw,72px)/1.05 Arial,sans-serif;letter-spacing:-.06em;transform:rotate(-2deg)}
+.discord-panel .winner-joke{margin:12px 0;font:clamp(24px,6vw,36px)/1.1 Arial,sans-serif;letter-spacing:-.06em}
+.winner-joke strong{color:var(--cream);background:var(--pink);padding:0 4px;font-style:italic;text-decoration:underline;text-decoration-thickness:3px}
+.discord-panel .winner-visitor{margin:14px 0;font:italic clamp(20px,5vw,29px)/1.15 Georgia,serif}
+.winner-visitor strong{color:#7742a8;text-decoration:underline;text-decoration-color:var(--pink)}
+.discord-panel .winner-access{margin:16px 0 0;font-size:clamp(13px,3.5vw,18px);font-weight:800;line-height:1.35}
+.winner-access strong{font-size:1.6em;background:var(--lilac);padding:0 5px}
+.winner-arrow{display:block;color:#7751ab;font:bold 38px/1.1 Arial,sans-serif}
+.winner-join{display:block;width:fit-content;max-width:100%;margin:0 auto;padding:9px 22px;background:var(--pink);color:var(--ink);border:3px solid var(--ink);border-radius:10px;box-shadow:4px 4px 0 var(--lilac);font:900 clamp(30px,8vw,48px)/1 Arial,sans-serif;letter-spacing:-.06em;transition:transform .2s}
+.winner-join:hover{transform:rotate(-3deg) scale(1.03);background:#b6f7b8}
+.discord-panel .winner-threat{margin:16px 0 0;font-size:16px;line-height:1.4}.winner-threat em{font-family:Georgia,serif}.winner-threat strong{color:#7742a8;letter-spacing:.02em}
+.discord-panel .discord-later{margin:9px auto 0;font-size:12px}
+@keyframes winnerRainbow{to{background-position:100% 50%}}
+@keyframes winnerWiggle{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1deg)}}
+@media(prefers-reduced-motion:reduce){.discord-panel .winner-rainbow{animation:none;color:#7742a8;background:none}.winner-join{transition:none}}
+@media(max-width:380px){.winner-copy{padding:16px 10px 10px}.discord-modal{padding:10px}.discord-panel{max-height:calc(100dvh - 20px)}.winner-border{font-size:12px}}

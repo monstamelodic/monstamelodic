@@ -156,11 +156,19 @@ if (discordButtons.length) {
   modal.innerHTML = `<div class="discord-backdrop" data-discord-close></div>
     <div class="discord-panel" role="dialog" aria-modal="true" aria-labelledby="discord-title">
       <button class="discord-close" type="button" aria-label="Close Discord invitation" data-discord-close>×</button>
-      <img class="modal-logo" src="Logo.png" alt="Monsta Melodic">
-      <h2 id="discord-title">THE MONSTER CAVE AWAITS.</h2>
-      <p>Come hang out, follow announcements and meet the Monsta Melodic community.</p>
-      <a class="button dark" href="${discordInvite}" target="_blank" rel="noopener">Join our Discord <span></span></a>
-      <button class="discord-later" type="button" data-discord-close>Maybe later</button>
+      <div class="winner-border" aria-hidden="true">Winner! Winner! Winner! Winner! Winner! Winner!</div>
+      <div class="winner-copy">
+        <h2 id="discord-title" class="winner-rainbow">CONGRATULATIONS!!!!</h2>
+        <p class="winner-won">YOU WON!!!!!</p>
+        <p class="winner-joke">THIS is <strong>NOT</strong> a JOKE!</p>
+        <p class="winner-visitor">you are MonstaMelodic's<br><strong>1,000,000th visitor!!!!!!!</strong></p>
+        <p class="winner-access">YOU HAVE OWN EXCLUSIVE ACCESS TO<br><strong>OUR DISCORD!!!!!</strong></p>
+        <span class="winner-arrow" aria-hidden="true">⬇</span>
+        <a class="winner-join" href="${discordInvite}" target="_blank" rel="noopener noreferrer">JOIN US!!!!</a>
+        <p class="winner-threat">OR.... OR...... <em>suffer....</em><br><strong>MUAHAAHHAHAHAH!!!!</strong></p>
+        <button class="discord-later" type="button" data-discord-close>Maybe later…</button>
+      </div>
+      <div class="winner-border" aria-hidden="true">Winner! Winner! Winner! Winner! Winner! Winner!</div>
     </div>`;
   document.body.append(modal);
   let returnFocus = null;
@@ -170,16 +178,29 @@ if (discordButtons.length) {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
-    if (returnFocus) returnFocus.focus();
+    if (returnFocus?.isConnected) returnFocus.focus();
   };
   const open = (trigger) => {
+    clearTimeout(invitationTimer);
     markSeen();
-    returnFocus = trigger || null;
+    returnFocus = trigger || document.activeElement;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     modal.querySelector('.discord-close').focus();
   };
+  // Start the home-page invitation only after a visitor interacts; once per session.
+  let invitationTimer;
+  if (document.querySelector('#home') && !wasSeen()) {
+    const interactions = ['pointerdown', 'pointermove', 'scroll', 'keydown', 'touchstart'];
+    const beginInvitation = () => {
+      interactions.forEach(type => window.removeEventListener(type, beginInvitation));
+      invitationTimer = setTimeout(() => {
+        if (!wasSeen() && !document.hidden) open();
+      }, 3500);
+    };
+    interactions.forEach(type => window.addEventListener(type, beginInvitation, {passive:true}));
+  }
   discordButtons.forEach(button => button.addEventListener('click', event => {
     event.preventDefault();
     open(button);
