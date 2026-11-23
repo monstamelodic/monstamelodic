@@ -172,8 +172,7 @@ if (discordButtons.length) {
     </div>`;
   document.body.append(modal);
   let returnFocus = null;
-  const markSeen = () => { try { sessionStorage.setItem('monstaDiscordSeen', '1'); } catch {} };
-  const wasSeen = () => { try { return sessionStorage.getItem('monstaDiscordSeen') === '1'; } catch { return false; } };
+  let invitationShown = false;
   const close = () => {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
@@ -182,21 +181,21 @@ if (discordButtons.length) {
   };
   const open = (trigger) => {
     clearTimeout(invitationTimer);
-    markSeen();
+    invitationShown = true;
     returnFocus = trigger || document.activeElement;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     modal.querySelector('.discord-close').focus();
   };
-  // Start the home-page invitation only after a visitor interacts; once per session.
+  // Start the home-page invitation only after a visitor interacts; once per page load.
   let invitationTimer;
-  if (document.querySelector('#home') && !wasSeen()) {
+  if (document.querySelector('#home')) {
     const interactions = ['pointerdown', 'pointermove', 'scroll', 'keydown', 'touchstart'];
     const beginInvitation = () => {
       interactions.forEach(type => window.removeEventListener(type, beginInvitation));
       invitationTimer = setTimeout(() => {
-        if (!wasSeen() && !document.hidden) open();
+        if (!invitationShown && !document.hidden) open();
       }, 3500);
     };
     interactions.forEach(type => window.addEventListener(type, beginInvitation, {passive:true}));
